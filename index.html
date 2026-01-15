@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BehaviorIQ Labs | Behavioral Intelligence for Salesforce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .sf-blue { background-color: #00A1E0; }
+        .sf-navy { background-color: #032d60; }
+        .gradient-text {
+            background: linear-gradient(90deg, #00A1E0, #032d60);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 sf-blue rounded-lg flex items-center justify-center text-white font-bold">B</div>
+                    <span class="text-xl font-bold text-slate-800 tracking-tight">BehaviorIQ <span class="text-blue-500 text-sm font-medium">Labs</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#features" class="hover:text-blue-600">Features</a>
+                    <a href="#roi" class="hover:text-blue-600">ROI Calculator</a>
+                    <a href="#security" class="hover:text-blue-600">Security</a>
+                </div>
+                <div>
+                    <a href="#" class="sf-blue text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-600 transition">Get Premium</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
+                Stop Losing Revenue to <br><span class="gradient-text">Behavioral Gaps.</span>
+            </h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                The only Salesforce app that detects "Ghosted" leads and "Stale" cases in real-time and remediates them automatically.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="sf-navy text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition">Start Free Analysis</button>
+                <button class="bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition">Watch Demo Video</button>
+            </div>
+            <div class="mt-16 bg-slate-100 rounded-3xl p-4 max-w-5xl mx-auto border shadow-2xl overflow-hidden">
+                <div class="bg-white rounded-2xl p-6 h-80 flex items-center justify-center border border-slate-200">
+                     <!-- Placeholder for Dashboard Screenshot -->
+                     <div class="text-center">
+                        <i class="fas fa-chart-line text-blue-500 text-5xl mb-4"></i>
+                        <p class="text-slate-400 italic">BehaviorIQ Dashboard Interface Goes Here</p>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pain Points Grid -->
+    <section id="features" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Identify. Remediate. Recover.</h2>
+                <p class="text-slate-500">We solve the four biggest "Silent Killers" of pipeline velocity.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Stale Cases -->
+                <div class="bg-white p-8 rounded-2xl border hover:shadow-xl transition group">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Stale Cases</h3>
+                    <p class="text-slate-500 text-sm">Automatically re-queues cases ghosted for 14+ days to ensure customer retention.</p>
+                </div>
+
+                <!-- Escalation Storm -->
+                <div class="bg-white p-8 rounded-2xl border hover:shadow-xl transition group">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Escalation Storm</h3>
+                    <p class="text-slate-500 text-sm">Detects premature escalations and enforces Tier-1 troubleshooting through Chatter coaching.</p>
+                </div>
+
+                <!-- Hot Lead Rescue -->
+                <div class="bg-white p-8 rounded-2xl border hover:shadow-xl transition group">
+                    <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-6 group-hover:bg-orange-600 group-hover:text-white transition">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Hot Lead Rescue</h3>
+                    <p class="text-slate-500 text-sm">Ensures unassigned leads are distributed to sales reps within minutes, not days.</p>
+                </div>
+
+                <!-- Data Gaps -->
+                <div class="bg-white p-8 rounded-2xl border hover:shadow-xl transition group">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Data Integrity</h3>
+                    <p class="text-slate-500 text-sm">Instantly flags missing contact info and prompts reps to fill the gaps for marketing campaigns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section id="roi" class="py-20 bg-slate-900 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 italic tracking-tight italic uppercase text-blue-400">The Cost of Doing Nothing</h2>
+                    <p class="text-slate-400 text-lg mb-8">Behavioral gaps cost mid-market organizations an average of $100k+ in lost revenue and wasted management time every year.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-blue-500"></i>
+                            <span>$50,000+ in retained revenue via Stale Case recovery</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-blue-500"></i>
+                            <span>$36,000 in reclaimed management time</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-blue-500"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-10 rounded-3xl backdrop-blur-sm">
+                    <div class="text-center">
+                        <p class="text-slate-400 uppercase tracking-widest text-xs font-bold mb-2">Annual Potential Recovery</p>
+                        <p class="text-7xl font-extrabold text-white mb-4 tracking-tighter">$104,000<span class="text-blue-500 text-3xl">+</span></p>
+                        <p class="text-slate-400 mb-8 italic">Based on BehaviorIQ standard ROI math for a 50-person org.</p>
+                        <button class="w-full sf-blue py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition">Get Your Custom ROI Report</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative bg -->
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Security Section -->
+    <section id="security" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-1 rounded-full text-xs font-bold uppercase mb-6 tracking-wider">
+                <i class="fas fa-shield-alt"></i>
+                <span>Enterprise Grade Trust</span>
+            </div>
+            <h2 class="text-3xl font-bold mb-8 italic">Your Data Never Leaves Salesforce</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="font-bold mb-2">Zero Data Extraction</h4>
+                    <p class="text-slate-500 text-sm">All pattern analysis happens within your own Salesforce Trust Boundary.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-2">Metadata Driven</h4>
+                    <p class="text-slate-500 text-sm">We use your existing rules and metadata to drive insights, not proprietary external silos.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-2">AppExchange Native</h4>
+                    <p class="text-slate-500 text-sm">Built on LWC and Apex, adhering to Salesforce's strict security standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-t py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-6">
+                <div class="w-6 h-6 sf-blue rounded flex items-center justify-center text-white text-xs font-bold">B</div>
+                <span class="font-bold text-slate-800">BehaviorIQ Labs LLC</span>
+            </div>
+            <p class="text-slate-500 text-sm mb-4 tracking-tighter">© 2026 BehaviorIQ Labs LLC. All rights reserved. Colorado, USA.</p>
+            <div class="flex justify-center space-x-6 text-slate-400 text-sm">
+                <a href="#" class="hover:text-blue-500">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-500">Terms of Service</a>
+                <a href="#" class="hover:text-blue-500">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
