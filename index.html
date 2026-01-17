@@ -3,189 +3,546 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BehaviorIQ Labs | Behavioral Intelligence for Salesforce</title>
+    <title>BehaviorIQ | Behavioral Intelligence for Salesforce</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
+        body { font-family: 'Inter', sans-serif; }
         .sf-blue { background-color: #00A1E0; }
         .sf-navy { background-color: #032d60; }
+        .text-sf-blue { color: #00A1E0; }
         .gradient-text {
-            background: linear-gradient(90deg, #00A1E0, #032d60);
+            background: linear-gradient(135deg, #00A1E0 0%, #032d60 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: radial-gradient(#00A1E0 0.5px, transparent 0.5px), radial-gradient(#00A1E0 0.5px, #ffffff 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.1;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="bg-slate-50 text-slate-900 antialiased">
 
-    <!-- Navigation -->
-    <nav class="bg-white border-b sticky top-0 z-50">
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 sf-blue rounded-lg flex items-center justify-center text-white font-bold">B</div>
-                    <span class="text-xl font-bold text-slate-800 tracking-tight">BehaviorIQ <span class="text-blue-500 text-sm font-medium">Labs</span></span>
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 sf-blue rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-200">B</div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-slate-800 tracking-tight leading-none">BehaviorIQ</span>
+                        <span class="text-xs text-blue-500 font-semibold tracking-widest uppercase">Coming Soon</span>
+                    </div>
                 </div>
-                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                    <a href="#features" class="hover:text-blue-600">Features</a>
-                    <a href="#roi" class="hover:text-blue-600">ROI Calculator</a>
-                    <a href="#security" class="hover:text-blue-600">Security</a>
+                <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#problem" class="hover:text-blue-600 transition">The Problem</a>
+                    <a href="#capabilities" class="hover:text-blue-600">Capabilities</a>
+                    <a href="#pricing" class="hover:text-blue-600 transition">Pricing Tiers</a>
+                    <a href="#roi" class="hover:text-blue-600 transition">ROI</a>
                 </div>
                 <div>
-                    <a href="#" class="sf-blue text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-600 transition">Get Premium</a>
+                    <a href="#contact" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-slate-800 transition shadow-lg ring-2 ring-transparent hover:ring-blue-500">Join Waitlist</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
-                Stop Losing Revenue to <br><span class="gradient-text">Behavioral Gaps.</span>
-            </h1>
-            <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-                The only Salesforce app that detects "Ghosted" leads and "Stale" cases in real-time and remediates them automatically.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <button class="sf-navy text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition">Start Free Analysis</button>
-                <button class="bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition">Watch Demo Video</button>
+    <header class="relative pt-24 pb-32 overflow-hidden bg-white">
+        <div class="absolute inset-0 hero-pattern z-0"></div>
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase mb-8 tracking-wider border border-blue-100">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                <span>Native Salesforce AppExchange App</span>
             </div>
-            <div class="mt-16 bg-slate-100 rounded-3xl p-4 max-w-5xl mx-auto border shadow-2xl overflow-hidden">
-                <div class="bg-white rounded-2xl p-6 h-80 flex items-center justify-center border border-slate-200">
-                     <!-- Placeholder for Dashboard Screenshot -->
-                     <div class="text-center">
-                        <i class="fas fa-chart-line text-blue-500 text-5xl mb-4"></i>
-                        <p class="text-slate-400 italic">BehaviorIQ Dashboard Interface Goes Here</p>
-                     </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight text-slate-900 leading-tight">
+                Stop Revenue Leakage.<br>
+                <span class="gradient-text">Automate Remediation.</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+                The first <strong>Behavioral Intelligence Engine</strong> that detects "Ghosted" opportunities, "Stale" cases, and "Zombie" projects—and fixes them automatically.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="sf-blue text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition shadow-xl shadow-blue-200 transform hover:-translate-y-1">
+                    Request Early Access
+                </a>
+                <a href="#demo" class="bg-white border-2 border-slate-200 text-slate-700 px-10 py-4 rounded-xl font-bold text-lg hover:border-blue-400 hover:text-blue-600 transition flex items-center justify-center gap-2">
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </a>
+            </div>
+
+            <div class="mt-20 relative max-w-5xl mx-auto">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-600 rounded-2xl blur opacity-20"></div>
+                <div class="relative bg-slate-900 rounded-2xl p-2 shadow-2xl border border-slate-800">
+                    <div class="bg-slate-800 rounded-xl h-96 flex items-center justify-center border border-slate-700/50">
+                        <div class="text-center">
+                            <i class="fas fa-chart-radar text-blue-500 text-6xl mb-6 opacity-80"></i>
+                            <h3 class="text-white text-xl font-semibold mb-2">BehaviorIQ Dashboard</h3>
+                            <p class="text-slate-400">Live Metric Monitoring & Remediation Logs</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Pain Points Grid -->
-    <section id="features" class="py-20">
+    <section id="problem" class="py-24 bg-white border-y border-slate-100">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Identify. Remediate. Recover.</h2>
-                <p class="text-slate-500">We solve the four biggest "Silent Killers" of pipeline velocity.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900">The "Silent Killers" of Pipeline Velocity</h2>
+                <p class="text-slate-500 text-lg max-w-2xl mx-auto">BehaviorIQ runs silently in the background, monitoring for these specific patterns that drain revenue.</p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Stale Cases -->
-                <div class="bg-white p-8 rounded-2xl border hover:shadow-xl transition group">
-                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <i class="fas fa-clock"></i>
+                <div class="bg-slate-50 p-8 rounded-3xl hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition duration-300 border border-transparent hover:border-slate-100">
+                    <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center text-red-600 mb-6 text-2xl">
+                        <i class="fas fa-ghost"></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Stale Cases</h3>
-                    <p class="text-slate-500 text-sm">Automatically re-queues cases ghosted for 14+ days to ensure customer retention.</p>
+                    <h3 class="font-bold text-xl mb-3 text-slate-800">Deal Ghosting</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">High-value opportunities (>50k) sitting untouched for 14+ days are 80% more likely to be lost.</p>
                 </div>
 
-                <!-- Escalation Storm -->
-                <div class="bg-white p-8 rounded-2xl border hover:shadow-xl transition group">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
-                        <i class="fas fa-bolt"></i>
+                <div class="bg-slate-50 p-8 rounded-3xl hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition duration-300 border border-transparent hover:border-slate-100">
+                    <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-600 mb-6 text-2xl">
+                        <i class="fas fa-history"></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Escalation Storm</h3>
-                    <p class="text-slate-500 text-sm">Detects premature escalations and enforces Tier-1 troubleshooting through Chatter coaching.</p>
+                    <h3 class="font-bold text-xl mb-3 text-slate-800">Stale Support</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">Customers churn when support cases sit inactive. We detect inactivity before the client complains.</p>
                 </div>
 
-                <!-- Hot Lead Rescue -->
-                <div class="bg-white p-8 rounded-2xl border hover:shadow-xl transition group">
-                    <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-6 group-hover:bg-orange-600 group-hover:text-white transition">
-                        <i class="fas fa-fire"></i>
+                <div class="bg-slate-50 p-8 rounded-3xl hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition duration-300 border border-transparent hover:border-slate-100">
+                    <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 mb-6 text-2xl">
+                        <i class="fas fa-user-clock"></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Hot Lead Rescue</h3>
-                    <p class="text-slate-500 text-sm">Ensures unassigned leads are distributed to sales reps within minutes, not days.</p>
+                    <h3 class="font-bold text-xl mb-3 text-slate-800">Lead Hoarding</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">Reps sitting on "New" leads creates bottlenecks. We auto-reassign them if not touched in 48 hours.</p>
                 </div>
 
-                <!-- Data Gaps -->
-                <div class="bg-white p-8 rounded-2xl border hover:shadow-xl transition group">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
-                        <i class="fas fa-database"></i>
+                <div class="bg-slate-50 p-8 rounded-3xl hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition duration-300 border border-transparent hover:border-slate-100">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 mb-6 text-2xl">
+                        <i class="fas fa-biohazard"></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Data Integrity</h3>
-                    <p class="text-slate-500 text-sm">Instantly flags missing contact info and prompts reps to fill the gaps for marketing campaigns.</p>
+                    <h3 class="font-bold text-xl mb-3 text-slate-800">Zombie Projects</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">Projects marked "Active" with no activity for 60 days confuse resource planning. We auto-archive them.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ROI Section -->
-    <section id="roi" class="py-20 bg-slate-900 text-white overflow-hidden relative">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold mb-6 italic tracking-tight italic uppercase text-blue-400">The Cost of Doing Nothing</h2>
-                    <p class="text-slate-400 text-lg mb-8">Behavioral gaps cost mid-market organizations an average of $100k+ in lost revenue and wasted management time every year.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-blue-500"></i>
-                            <span>$50,000+ in retained revenue via Stale Case recovery</span>
+    <section id="pricing" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">Diagnostic vs. <span class="text-blue-400">Automated</span></h2>
+            <p class="text-slate-400 text-xl max-w-2xl mx-auto">Identify the bottlenecks for free. Upgrade to recover $100k+ in lost annual revenue through autonomous remediation.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+            
+            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 flex flex-col hover:border-white/20 transition group">
+                <div class="mb-10">
+                    <span class="bg-slate-700 text-slate-300 px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">Diagnostic Edition</span>
+                    <h3 class="text-4xl font-bold mt-4 mb-3">Free Core</h3>
+                    <p class="text-slate-400 text-lg">Essential visibility for Support teams.</p>
+                </div>
+                
+                <div class="space-y-8 flex-grow">
+                    <div>
+                        <h4 class="text-blue-400 font-bold uppercase text-xs tracking-widest mb-4">Standard Pattern Detection</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-slate-300">
+                                <i class="fas fa-check-circle text-slate-500 mt-1 mr-3"></i>
+                                <span>Stale Case Detection (14-Day Inactivity)</span>
+                            </li>
+                            <li class="flex items-start text-slate-300">
+                                <i class="fas fa-check-circle text-slate-500 mt-1 mr-3"></i>
+                                <span>Standard Metadata Health Checks</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-blue-400 font-bold uppercase text-xs tracking-widest mb-4">Manual Remediation</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-white font-semibold">
+                                <i class="fas fa-window-maximize text-blue-500 mt-1 mr-3"></i>
+                                <span>Interactive Solution Guide: <span class="text-slate-400 font-normal">A dynamic in-app modal that guides you through the manual fix for every detected gap.</span></span>
+                            </li>
+                            <li class="flex items-start text-slate-300">
+                                <i class="fas fa-check-circle text-slate-500 mt-1 mr-3"></i>
+                                <span>Native Slack & Email Alerts</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                
+                <div class="relative bg-slate-800 rounded-3xl p-10 flex flex-col border border-blue-500/50 shadow-2xl">
+                    <div class="mb-10">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">Enterprise Edition</span>
+                            <span class="text-blue-400 font-bold">Most Popular</span>
+                        </div>
+                        <h3 class="text-4xl font-bold mt-4 mb-3">Premium Intelligence</h3>
+                        <p class="text-blue-100/70 text-lg">Turn Salesforce into a self-healing revenue engine.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-10">
+                        <div>
+                            <h4 class="text-blue-400 font-bold uppercase text-xs tracking-widest mb-4">Remediation</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start text-white font-bold">
+                                    <i class="fas fa-bolt text-yellow-400 mt-1 mr-3"></i>
+                                    <span>One-Click Auto-Fix</span>
+                                </li>
+                                <li class="flex items-start text-slate-300 text-sm leading-relaxed">
+                                    <span>Don't just guide—remediate. BehaviorIQ executes the fix instantly via native Apex & Flow.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-blue-400 font-bold uppercase text-xs tracking-widest mb-4">Advanced Analytics</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start text-white font-bold">
+                                    <i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i>
+                                    <span>User Leaderboard</span>
+                                </li>
+                                <li class="flex items-start text-slate-300 text-sm leading-relaxed">
+                                    <span>Identify the "Silent Killers"—visualize exactly which users are causing the most data gaps and revenue risk.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-blue-400 font-bold uppercase text-xs tracking-widest mb-4">Pattern Detection</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center text-slate-200 text-sm">
+                                    <i class="fas fa-star text-blue-400 mr-2 text-[10px]"></i> High-Value Deal Ghosting
+                                </li>
+                                <li class="flex items-center text-slate-200 text-sm">
+                                    <i class="fas fa-star text-blue-400 mr-2 text-[10px]"></i> Escalation Storm Shield
+                                </li>
+                                <li class="flex items-center text-slate-200 text-sm">
+                                    <i class="fas fa-star text-blue-400 mr-2 text-[10px]"></i> Lead Hoarding Detection
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-blue-400 font-bold uppercase text-xs tracking-widest mb-4">Enterprise Config</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start text-white font-bold text-sm">
+                                    <i class="fas fa-cogs text-blue-400 mt-1 mr-3"></i>
+                                    <span>Custom Object Tracking</span>
+                                </li>
+                                <li class="flex items-start text-slate-300 text-xs italic">
+                                    <span>Map proprietary fields to custom remediation paths unique to your business.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="capabilities" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl font-extrabold mb-4 tracking-tight">Enterprise-Grade <span class="text-sf-blue">Behavioral Logic</span></h2>
+            <p class="text-slate-500 text-lg max-w-2xl mx-auto">Built on a native Apex engine designed for scale, security, and zero data-egress.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div>
+                <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-bold uppercase mb-4">
+                    <i class="fas fa-microchip"></i>
+                    <span>The Analysis Engine</span>
+                </div>
+                <h3 class="text-3xl font-bold mb-6">Real-Time Pattern Recognition</h3>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Our <code>PatternAnalysisService</code> continuously monitors your org using native triggers and scheduled batch jobs. Unlike standard validation rules, BehaviorIQ tracks the <strong>silence</strong>—detecting when crucial actions <em>aren't</em> happening.
+                </p>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Custom Metadata-driven thresholds</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> High-performance SOQL optimization</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Async processing to protect your Governor Limits</li>
+                </ul>
+            </div>
+            <div class="bg-slate-100 rounded-3xl p-8 border border-slate-200 shadow-inner">
+                <div class="bg-white rounded-xl shadow-lg p-4 font-mono text-xs text-slate-500 overflow-hidden h-64">
+                    <div class="flex space-x-2 mb-4">
+                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                    </div>
+                    <p class="text-blue-600">// BehaviorPatternRule Processing</p>
+                    <p>for(PatternRule rule : activeRules) {</p>
+                    <p class="pl-4">if(record.Inactivity_Days__c > rule.Threshold) {</p>
+                    <p class="pl-8 text-indigo-600">BehaviorEventPublisher.publish(record.Id);</p>
+                    <p class="pl-4">}</p>
+                    <p>}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 bg-slate-900 rounded-3xl p-8 shadow-2xl">
+                <div class="flex items-center justify-between mb-8">
+                    <span class="text-white font-bold">Remediation Path: Stale Case</span>
+                    <span class="bg-emerald-500/20 text-emerald-400 text-[10px] px-2 py-1 rounded-full uppercase font-black">Active</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white/5 border border-white/10 p-4 rounded-xl flex items-center justify-between">
+                        <span class="text-slate-400 text-sm">1. Re-queue Case</span>
+                        <i class="fas fa-arrow-right text-blue-500"></i>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-4 rounded-xl flex items-center justify-between">
+                        <span class="text-slate-400 text-sm">2. Notify Manager (Slack)</span>
+                        <i class="fas fa-arrow-right text-blue-500"></i>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-4 rounded-xl flex items-center justify-between">
+                        <span class="text-slate-400 text-sm">3. Log Recovery ROI</span>
+                        <i class="fas fa-check text-emerald-500"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <div class="inline-flex items-center space-x-2 bg-indigo-50 text-indigo-700 px-3 py-1 rounded-lg text-xs font-bold uppercase mb-4">
+                    <i class="fas fa-magic"></i>
+                    <span>Automated Fixes</span>
+                </div>
+                <h3 class="text-3xl font-bold mb-6">Custom Remediation Paths</h3>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Identification is only half the battle. BehaviorIQ allows admins to map specific "Fix Types" to every pattern. Whether it's an automated field update or a complex Flow trigger, our <code>PatternFixService</code> handles the heavy lifting.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 border rounded-xl hover:border-blue-500 transition cursor-default">
+                        <i class="fas fa-sync text-blue-500 mb-2"></i>
+                        <p class="font-bold text-sm">Auto-Reassign</p>
+                    </div>
+                    <div class="p-4 border rounded-xl hover:border-blue-500 transition cursor-default">
+                        <i class="fas fa-comment-dots text-blue-500 mb-2"></i>
+                        <p class="font-bold text-sm">Chatter Coaching</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="roi" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-extrabold mb-6 tracking-tight">The <span class="text-blue-400">Math</span> Behind the Recovery</h2>
+                <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                    BehaviorIQ doesn't guess your ROI. It calculates it using your live Salesforce data and enterprise-standard risk models.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 shrink-0 border border-blue-500/20">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-1 text-white">Direct Revenue Protection</h4>
+                            <p class="text-slate-400 text-sm">For Opportunities, we track the actual <strong>Amount</strong> at risk. When a $50k deal goes stale, the Impact Score reflects $50,000 in potential leakage.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 shrink-0 border border-indigo-500/20">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-1 text-white">Configurable Incident Costs</h4>
+                            <p class="text-slate-400 text-sm">For Cases and Leads, we use your custom <strong>Cost Per Incident</strong> values to quantify the impact of support churn and lead decay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 p-10 rounded-3xl backdrop-blur-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4">
+                    <span class="text-[120px] font-black text-white/5 absolute -top-10 -right-4 select-none">ROI</span>
+                </div>
+                
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold mb-6 italic uppercase tracking-widest text-blue-400">Impact Score Formula</h3>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-white/5 mb-8">
+                        <code class="text-blue-200 text-lg md:text-xl font-mono block text-center">
+                            Σ (Detected Incidents × Cost Per Unit)
+                        </code>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-slate-300">
+                            <i class="fas fa-check text-blue-500 mr-3"></i>
+                            <span>Daily historical trend snapshots</span>
                         </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-blue-500"></i>
-                            <span>$36,000 in reclaimed management time</span>
+                        <li class="flex items-center text-slate-300">
+                            <i class="fas fa-check text-blue-500 mr-3"></i>
+                            <span>Automated "Estimated Savings" reports</span>
                         </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-blue-500"></i>
+                        <li class="flex items-center text-slate-300">
+                            <i class="fas fa-check text-blue-500 mr-3"></i>
+                            <span>User-level accountability metrics</span>
                         </li>
                     </ul>
+                    <a href="#contact" class="block text-center w-full sf-blue py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition shadow-xl shadow-blue-500/20">
+                        Request Custom ROI Framework
+                    </a>
                 </div>
-                <div class="bg-white/5 border border-white/10 p-10 rounded-3xl backdrop-blur-sm">
-                    <div class="text-center">
-                        <p class="text-slate-400 uppercase tracking-widest text-xs font-bold mb-2">Annual Potential Recovery</p>
-                        <p class="text-7xl font-extrabold text-white mb-4 tracking-tighter">$104,000<span class="text-blue-500 text-3xl">+</span></p>
-                        <p class="text-slate-400 mb-8 italic">Based on BehaviorIQ standard ROI math for a 50-person org.</p>
-                        <button class="w-full sf-blue py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition">Get Your Custom ROI Report</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="demo" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">See BehaviorIQ in Action</h2>
+            <div class="aspect-w-16 aspect-h-9 bg-slate-900 rounded-2xl flex items-center justify-center relative overflow-hidden shadow-2xl group cursor-pointer">
+                <div class="absolute inset-0 bg-slate-900/50 z-10 flex flex-col items-center justify-center">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-4 border border-white/30 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-lock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-xl">Demo Video Coming Soon</h3>
+                    <p class="text-slate-300 text-sm mt-2">We are currently finalizing the Release Candidate.</p>
+                </div>
+                <div class="w-full h-96 bg-gradient-to-br from-slate-800 to-slate-900"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-50 border-t border-slate-200 pt-20 pb-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 sf-blue rounded-lg flex items-center justify-center text-white font-bold">B</div>
+                        <span class="text-xl font-bold text-slate-800">BehaviorIQ</span>
+                    </div>
+                    <p class="text-slate-500 mb-6 max-w-sm">
+                        Born from the frustration of seeing millions in pipeline lost to simple human inaction. We automate the discipline your team needs.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-blue-500 transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-blue-500 transition"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-blue-500 transition"><i class="fab fa-github text-xl"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Decorative bg -->
-        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
-    </section>
-
-    <!-- Security Section -->
-    <section id="security" class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-1 rounded-full text-xs font-bold uppercase mb-6 tracking-wider">
-                <i class="fas fa-shield-alt"></i>
-                <span>Enterprise Grade Trust</span>
-            </div>
-            <h2 class="text-3xl font-bold mb-8 italic">Your Data Never Leaves Salesforce</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="font-bold mb-2">Zero Data Extraction</h4>
-                    <p class="text-slate-500 text-sm">All pattern analysis happens within your own Salesforce Trust Boundary.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-2">Metadata Driven</h4>
-                    <p class="text-slate-500 text-sm">We use your existing rules and metadata to drive insights, not proprietary external silos.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-2">AppExchange Native</h4>
-                    <p class="text-slate-500 text-sm">Built on LWC and Apex, adhering to Salesforce's strict security standards.</p>
+                
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-slate-900 mb-2">Leadership & Contact</h4>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center text-slate-500">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-900">Sean O'Connor</p>
+                            <p class="text-xs text-blue-600 font-bold uppercase tracking-wide">Founder & Principal Architect</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-4">Interested in early access or investment opportunities? Reach out directly.</p>
+                    <a href="mailto:sean.oconnor@behavioriq.ai" class="inline-flex items-center text-slate-700 font-semibold hover:text-blue-600 transition">
+                        <i class="far fa-envelope mr-2"></i> sean.oconnor@behavioriq.ai
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-50 border-t py-12">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex items-center justify-center space-x-2 mb-6">
-                <div class="w-6 h-6 sf-blue rounded flex items-center justify-center text-white text-xs font-bold">B</div>
-                <span class="font-bold text-slate-800">BehaviorIQ Labs LLC</span>
-            </div>
-            <p class="text-slate-500 text-sm mb-4 tracking-tighter">© 2026 BehaviorIQ Labs LLC. All rights reserved. Colorado, USA.</p>
-            <div class="flex justify-center space-x-6 text-slate-400 text-sm">
-                <a href="#" class="hover:text-blue-500">Privacy Policy</a>
-                <a href="#" class="hover:text-blue-500">Terms of Service</a>
-                <a href="#" class="hover:text-blue-500">Contact Support</a>
+            
+            <div class="border-t border-slate-200 pt-8 text-center">
+                <p class="text-slate-400 text-sm">© 2026 BehaviorIQ Labs LLC. All rights reserved. Denver, Colorado.</p>
             </div>
         </div>
     </footer>
+<div id="waitlistModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md">
+    <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl relative">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 transition">
+            <i class="fas fa-times text-xl"></i>
+        </button>
+        
+        <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mx-auto mb-4">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 leading-tight">Secure Your Spot</h3>
+            <p class="text-slate-500 mt-2">Join the priority waitlist. We will notify you the moment BehaviorIQ is available on the AppExchange.</p>
+        </div>
 
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="space-y-4">
+            
+            <input type="hidden" name="oid" value="00DgK00000BI3wI">
+            <input type="hidden" name="retURL" value="https://behavioriq.ai">
+            <input type="hidden" name="lead_source" value="Website Waitlist">
+
+            <div>
+                <label for="first_name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">First Name</label>
+                <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
+            </div>
+
+            <div>
+                <label for="last_name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Last Name</label>
+                <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
+            </div>
+
+            <div>
+                <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Work Email</label>
+                <input id="email" maxlength="80" name="email" size="20" type="email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
+            </div>
+
+            <button type="submit" class="w-full sf-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition shadow-lg shadow-blue-200 mt-2">
+                Join the Waitlist
+            </button>
+            
+            <p class="text-[10px] text-center text-slate-400 uppercase tracking-widest font-bold mt-4">Built in Denver, CO | Native to Salesforce</p>
+        </form>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        const modal = document.getElementById('waitlistModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('waitlistModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    }
+
+    // Modern selector to catch all trigger buttons without jumping the page
+    document.addEventListener('click', function(e) {
+        // Targets any element that looks like a Waitlist/Access button
+        if (e.target.closest('a[href="#contact"]') || 
+            e.target.innerText.includes('Waitlist') || 
+            e.target.innerText.includes('Early Access')) {
+            
+            e.preventDefault(); // Stop the "Shoot to bottom" jump
+            openModal();
+        }
+    });
+</script>
 </body>
 </html>
