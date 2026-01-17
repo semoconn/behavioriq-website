@@ -479,41 +479,65 @@
             <i class="fas fa-times text-xl"></i>
         </button>
         
-        <div class="text-center mb-8">
-            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mx-auto mb-4">
-                <i class="fas fa-rocket"></i>
+        <div id="modalContent">
+    <div class="text-center mb-6">
+        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mx-auto mb-4">
+            <i class="fas fa-rocket"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-900 leading-tight">Secure Your Spot</h3>
+        <p class="text-slate-500 mt-2 text-sm">Join the priority waitlist for BehaviorIQ.</p>
+    </div>
+
+    <form id="salesforceForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="space-y-4">
+        
+        <input type="hidden" name="oid" value="00DgK00000BI3wI">
+        <input type="hidden" name="retURL" value="http://127.0.0.1:5500/index.html?status=success">
+        <input type="hidden" name="lead_source" value="Website Waitlist">
+
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <label for="first_name" class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">First Name</label>
+                <input id="first_name" name="first_name" type="text" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition text-sm">
             </div>
-            <h3 class="text-2xl font-bold text-slate-900 leading-tight">Secure Your Spot</h3>
-            <p class="text-slate-500 mt-2">Join the priority waitlist. We will notify you the moment BehaviorIQ is available on the AppExchange.</p>
+            <div>
+                <label for="last_name" class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Last Name</label>
+                <input id="last_name" name="last_name" type="text" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition text-sm">
+            </div>
         </div>
 
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="space-y-4">
-            
-            <input type="hidden" name="oid" value="00DgK00000BI3wI">
-            <input type="hidden" name="retURL" value="https://behavioriq.ai">
-            <input type="hidden" name="lead_source" value="Website Waitlist">
+        <div>
+            <label for="email" class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Work Email</label>
+            <input id="email" name="email" type="email" required placeholder="name@company.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition text-sm">
+        </div>
 
+        <div>
+            <label for="company" class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Company Name</label>
+            <input id="company" name="company" type="text" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition text-sm">
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
             <div>
-                <label for="first_name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">First Name</label>
-                <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
+                <label for="title" class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Job Title (Optional)</label>
+                <input id="title" name="title" type="text" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition text-sm">
             </div>
-
             <div>
-                <label for="last_name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Last Name</label>
-                <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
+                <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Org Size</label>
+                <select name="00Nxxxxxxxxxxxx" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition text-sm bg-white">
+                    <option value="">Select...</option>
+                    <option value="1-50">1-50 users</option>
+                    <option value="51-200">51-200 users</option>
+                    <option value="201+">201+ users</option>
+                </select>
             </div>
+        </div>
 
-            <div>
-                <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Work Email</label>
-                <input id="email" maxlength="80" name="email" size="20" type="email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
-            </div>
-
-            <button type="submit" class="w-full sf-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition shadow-lg shadow-blue-200 mt-2">
-                Join the Waitlist
-            </button>
-            
-            <p class="text-[10px] text-center text-slate-400 uppercase tracking-widest font-bold mt-4">Built in Denver, CO | Native to Salesforce</p>
-        </form>
+        <button type="submit" id="submitBtn" class="w-full sf-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition shadow-lg shadow-blue-200 mt-2">
+            Join Waitlist
+        </button>
+        
+        <p class="text-[9px] text-center text-slate-400 uppercase tracking-widest font-bold mt-4">Native to the Salesforce Trust Boundary</p>
+    </form>
+</div>
     </div>
 </div>
 
@@ -522,27 +546,49 @@
         const modal = document.getElementById('waitlistModal');
         modal.classList.remove('hidden');
         modal.classList.add('flex');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
         const modal = document.getElementById('waitlistModal');
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        document.body.style.overflow = 'auto';
     }
 
-    // Modern selector to catch all trigger buttons without jumping the page
     document.addEventListener('click', function(e) {
-        // Targets any element that looks like a Waitlist/Access button
-        if (e.target.closest('a[href="#contact"]') || 
-            e.target.innerText.includes('Waitlist') || 
-            e.target.innerText.includes('Early Access')) {
-            
-            e.preventDefault(); // Stop the "Shoot to bottom" jump
-            openModal();
+        const trigger = e.target.closest('a[href="#contact"], button');
+        
+        // This check now works because the form has the ID "salesforceForm"
+        if (trigger && !trigger.closest('#salesforceForm')) {
+            const text = trigger.innerText.toLowerCase();
+            if (text.includes('waitlist') || text.includes('early access') || (trigger.hash && trigger.hash === '#contact')) {
+                e.preventDefault();
+                openModal();
+            }
         }
     });
+
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('status') === 'success') {
+            openModal();
+            // This now works because the div "modalContent" exists
+            const contentArea = document.getElementById('modalContent');
+            if (contentArea) {
+                contentArea.innerHTML = `
+                    <div class="text-center py-12">
+                        <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 text-4xl mx-auto mb-6">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-900 mb-2">Success!</h3>
+                        <p class="text-slate-500">Your request has been logged in our system. You'll receive a confirmation email shortly.</p>
+                        <button onclick="window.location.href='/'" class="mt-8 sf-blue text-white px-8 py-3 rounded-xl font-bold transition">Return Home</button>
+                    </div>
+                `;
+            }
+        }
+    }
 </script>
 </body>
 </html>
