@@ -25,8 +25,9 @@ This template will be sent to the lead automatically when they sign up.
 
     We have received your request for early access. You are now in the queue to receive updates about our upcoming release.
 
-    BehaviorIQ Team
-    hello@behavioriq.ai
+    Best,
+    
+    Sean O'Connor Founder & Principal Architect, BehaviorIQ
     ```
 8.  **Save.**
 
