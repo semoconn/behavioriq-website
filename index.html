@@ -488,6 +488,11 @@
         <p class="text-slate-500 mt-2 text-sm">Join the priority waitlist for BehaviorIQ.</p>
     </div>
 
+    <style>
+        /* Spam-trap wrapper. Positioned off-screen rather than display:none, which
+           form bots routinely detect and skip. Must stay invisible to humans. */
+        .bq-hp { position: absolute !important; left: -9999px !important; top: auto; width: 1px; height: 1px; overflow: hidden; }
+    </style>
     <form id="salesforceForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="space-y-4">
         
         <input type="hidden" name="oid" value="00DKY00000gVMdV">
@@ -534,12 +539,47 @@
             -->
         </div>
 
+            <!--
+                Spam controls. Both inputs map to custom Lead fields and are enforced
+                SERVER-SIDE by the BehaviorIQ_Waitlist_Lead_Notification flow, because
+                a bot can POST straight to webto.salesforce.com and never run this
+                page's JavaScript.
+
+                00Nhm00000DA1JV = Lead.Form_Honeypot__c  hidden from humans by CSS,
+                                  so any value means an automated submission.
+                00Nhm00000DA1L7 = Lead.Form_Token__c     empty in the HTML and filled
+                                  by the script below, so a submission that skipped
+                                  our JS arrives blank.
+
+                Do not give either input a visible label, and do not remove .bq-hp.
+            -->
+            <div class="bq-hp" aria-hidden="true">
+                <label for="00Nhm00000DA1JV">Company website (leave this blank)</label>
+                <input type="text" id="00Nhm00000DA1JV" name="00Nhm00000DA1JV" tabindex="-1" autocomplete="off">
+                <input type="text" id="00Nhm00000DA1L7" name="00Nhm00000DA1L7" tabindex="-1" autocomplete="off" value="">
+            </div>
+
         <button type="submit" id="submitBtn" class="w-full sf-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition shadow-lg shadow-blue-200 mt-2">
             Join Waitlist
         </button>
         
         <p class="text-[9px] text-center text-slate-400 uppercase tracking-widest font-bold mt-4">Native to the Salesforce Trust Boundary</p>
     </form>
+    <script>
+        // Waitlist spam guard. This only stops bots that execute page JavaScript;
+        // the authoritative check is server-side in the Salesforce flow.
+        (function () {
+            var form = document.getElementById('salesforceForm');
+            if (!form) return;
+            var token = document.getElementById('00Nhm00000DA1L7');
+            if (token) { token.value = 'bq1'; }
+            form.addEventListener('submit', function (event) {
+                var trap = document.getElementById('00Nhm00000DA1JV');
+                if (trap && trap.value !== '') { event.preventDefault(); }
+            });
+        })();
+    </script>
+
 </div>
     </div>
 </div>
