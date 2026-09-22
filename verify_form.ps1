@@ -3,7 +3,7 @@
 $htmlContent = Get-Content -Path "index.html" -Raw
 
 # Expected Values
-$expectedOid = "00DKY00000gVMdV"
+$expectedOid = "00DKY00000gWV4B"
 $expectedSource = "Website Waitlist"
 
 # Check OID

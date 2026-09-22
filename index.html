@@ -495,7 +495,7 @@
     </style>
     <form id="salesforceForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="space-y-4">
         
-        <input type="hidden" name="oid" value="00DKY00000gVMdV">
+        <input type="hidden" name="oid" value="00DKY00000gWV4B">
         <input type="hidden" name="retURL" value="https://behavioriq.ai/index.html?status=success">
         <input type="hidden" name="lead_source" value="Website Waitlist">
 
@@ -545,18 +545,18 @@
                 a bot can POST straight to webto.salesforce.com and never run this
                 page's JavaScript.
 
-                00Nhm00000DA1JV = Lead.Form_Honeypot__c  hidden from humans by CSS,
+                00Nal00001Oxap7 = Lead.Form_Honeypot__c  hidden from humans by CSS,
                                   so any value means an automated submission.
-                00Nhm00000DA1L7 = Lead.Form_Token__c     empty in the HTML and filled
+                00Nal00001Oxap8 = Lead.Form_Token__c     empty in the HTML and filled
                                   by the script below, so a submission that skipped
                                   our JS arrives blank.
 
                 Do not give either input a visible label, and do not remove .bq-hp.
             -->
             <div class="bq-hp" aria-hidden="true">
-                <label for="00Nhm00000DA1JV">Company website (leave this blank)</label>
-                <input type="text" id="00Nhm00000DA1JV" name="00Nhm00000DA1JV" tabindex="-1" autocomplete="off">
-                <input type="text" id="00Nhm00000DA1L7" name="00Nhm00000DA1L7" tabindex="-1" autocomplete="off" value="">
+                <label for="00Nal00001Oxap7">Company website (leave this blank)</label>
+                <input type="text" id="00Nal00001Oxap7" name="00Nal00001Oxap7" tabindex="-1" autocomplete="off">
+                <input type="text" id="00Nal00001Oxap8" name="00Nal00001Oxap8" tabindex="-1" autocomplete="off" value="">
             </div>
 
         <button type="submit" id="submitBtn" class="w-full sf-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition shadow-lg shadow-blue-200 mt-2">
@@ -571,10 +571,10 @@
         (function () {
             var form = document.getElementById('salesforceForm');
             if (!form) return;
-            var token = document.getElementById('00Nhm00000DA1L7');
+            var token = document.getElementById('00Nal00001Oxap8');
             if (token) { token.value = 'bq1'; }
             form.addEventListener('submit', function (event) {
-                var trap = document.getElementById('00Nhm00000DA1JV');
+                var trap = document.getElementById('00Nal00001Oxap7');
                 if (trap && trap.value !== '') { event.preventDefault(); }
             });
         })();
